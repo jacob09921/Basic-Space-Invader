@@ -80,7 +80,7 @@ window.addEventListener('touchmove', (evt) => {
             square[currentPosition].classList.remove('shooter')
             setTimeout(() => {
                 currentPosition--
-            }, 1000)
+            }, 300)
             square[currentPosition].classList.add('shooter')
         } else {
             currentPosition = 195;
@@ -91,7 +91,7 @@ window.addEventListener('touchmove', (evt) => {
             square[currentPosition].classList.remove('shooter')
             setTimeout(() => {
                 currentPosition++
-            }, 1000)
+            }, 300)
             square[currentPosition].classList.add('shooter')
         } else {
             currentPosition = 209;
