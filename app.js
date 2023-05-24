@@ -94,7 +94,6 @@ window.addEventListener('touchmove', (evt) => {
         }
 
     }
-
     shoot()
 })
 
@@ -154,15 +153,18 @@ function shoot() {
     let beamIndex = currentPosition // scope // the currentPosition will change also the variable named beam index
     function move() {
         square[beamIndex].classList.remove('beam')
-        beamIndex -= width
-        square[beamIndex].classList.add('beam')
-        if (square[beamIndex].classList.contains('invader')) {
-            square[beamIndex].classList.remove('invader')
-            entries++
+        setTimeout(() => {
+            beamIndex -= width
+            square[beamIndex].classList.add('beam')
+            if (square[beamIndex].classList.contains('invader')) {
+                square[beamIndex].classList.remove('invader')
+                entries++
 
-        }
-        const removal = invader.indexOf(beamIndex)
-        storage.push(removal)
+            }
+            const removal = invader.indexOf(beamIndex)
+            storage.push(removal)
+        }, 600)
+
 
     }
     shot = setInterval(move, 200) // its like loop 
