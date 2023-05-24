@@ -83,6 +83,7 @@ window.addEventListener('touchmove', (evt) => {
         } else {
             currentPosition = 195;
         }
+        shoot()
     } else if (parseInt(evt.touches[0].clientX) > 200) {
         if (currentPosition != 209) {
             square[currentPosition].classList.remove('shooter')
@@ -91,11 +92,9 @@ window.addEventListener('touchmove', (evt) => {
         } else {
             currentPosition = 209;
         }
-    }
-
-    if (parseInt(evt.touches[0].clientY) < 100) {
         shoot()
     }
+
 
 })
 
