@@ -153,19 +153,15 @@ function shoot() {
     let beamIndex = currentPosition // scope // the currentPosition will change also the variable named beam index
     function move() {
         square[beamIndex].classList.remove('beam')
-        setTimeout(() => {
-            beamIndex -= width
-            square[beamIndex].classList.add('beam')
-            if (square[beamIndex].classList.contains('invader')) {
-                square[beamIndex].classList.remove('invader')
-                entries++
+        beamIndex -= width
+        square[beamIndex].classList.add('beam')
+        if (square[beamIndex].classList.contains('invader')) {
+            square[beamIndex].classList.remove('invader')
+            entries++
 
-            }
-            const removal = invader.indexOf(beamIndex)
-            storage.push(removal)
-        }, 600)
-
-
+        }
+        const removal = invader.indexOf(beamIndex)
+        storage.push(removal)
     }
     shot = setInterval(move, 200) // its like loop 
 }
