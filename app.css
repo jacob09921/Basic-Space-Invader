@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
+    background-size: cover;
+    color: white;
+}
+
+body .container {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    background-color: white;
+}
+
+
+
+.container div {
+    width: 20px;
+    height: 20px;
+}
+
+.invader {
+    background-image: url('https://www.svgrepo.com/show/390749/space-invaders-pixel-retro-arcade.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.shooter {
+    background-image: url('https://www.svgrepo.com/show/84124/spaceship.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.beam {
+    background-image: url('https://www.svgrepo.com/show/506715/fire.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
