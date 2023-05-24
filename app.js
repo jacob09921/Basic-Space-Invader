@@ -78,7 +78,9 @@ window.addEventListener('touchmove', (evt) => {
     if (parseInt(evt.touches[0].clientX) < 200) {
         if (currentPosition != 195) {
             square[currentPosition].classList.remove('shooter')
-            currentPosition--
+            setTimeout(() => {
+                currentPosition--
+            }, 1000)
             square[currentPosition].classList.add('shooter')
         } else {
             currentPosition = 195;
@@ -87,7 +89,9 @@ window.addEventListener('touchmove', (evt) => {
     } else if (parseInt(evt.touches[0].clientX) > 200) {
         if (currentPosition != 209) {
             square[currentPosition].classList.remove('shooter')
-            currentPosition++
+            setTimeout(() => {
+                currentPosition++
+            }, 1000)
             square[currentPosition].classList.add('shooter')
         } else {
             currentPosition = 209;
