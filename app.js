@@ -75,7 +75,7 @@ window.addEventListener('keydown', (evt) => {
 
 // Mobile Phone Control
 window.addEventListener('touchmove', (evt) => {
-    if (parseInt(evt.touches[0].clientX) < 205) {
+    if (parseInt(evt.touches[0].clientX) < 200) {
         if (currentPosition != 195) {
             square[currentPosition].classList.remove('shooter')
             currentPosition--
@@ -83,7 +83,7 @@ window.addEventListener('touchmove', (evt) => {
         } else {
             currentPosition = 195;
         }
-    } else if (parseInt(evt.touches[0].clientX) > 205) {
+    } else if (parseInt(evt.touches[0].clientX) > 200) {
         if (currentPosition != 209) {
             square[currentPosition].classList.remove('shooter')
             currentPosition++
@@ -92,7 +92,11 @@ window.addEventListener('touchmove', (evt) => {
             currentPosition = 209;
         }
     }
-    shoot()
+
+    if (parseInt(evt.touches[0].clientY) < 100) {
+        shoot()
+    }
+
 })
 
 
